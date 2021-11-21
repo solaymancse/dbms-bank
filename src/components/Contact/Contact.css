@@ -1,21 +1,11 @@
-.contact-info{
+.top-contact{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     width: 100%;
-    justify-content: space-around;
 }
 small{
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     cursor: pointer;
-}
-
-@media (max-width: 400px) {
-    .contact-info{
-        display: none;
-    }
-    small{
-        display: none;
-    }
-    .icon{
-        display: none;
-    }
 }

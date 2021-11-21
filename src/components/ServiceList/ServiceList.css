@@ -2,14 +2,21 @@
 .list{
     list-style: none;
     font-size: 14px;
-    display: inline;
+    display: flex;
     padding: 10px;
-    background-color: #FFB919;
-    color: #333;
+    background: #C70039;
+    color: #fff;
     border-right: 1px solid #fff;
     font-family: 'Roboto', sans-serif;
     float: right;
     cursor: pointer;
+    transition: 0.5s;
+   justify-content: center;
+}
+.list:hover{
+    color: #333;
+    background-color: #FFB919;
+    
 }
 .list-item{
 

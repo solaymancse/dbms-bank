@@ -1,30 +1,29 @@
 import React from 'react';
 import './Header.css';
-import { Nav , Navbar , Container} from 'react-bootstrap';
+import { Link } from '@mui/material';
 
 
 const Header = () => {
     return (
-            <>  
-                <Navbar className="top-nav">
-                    <Container>
-                       <div className="brand">
-                            <img className="logo" src="Assets/DBMS Bank.png" alt="" srcset="" />
-                       </div>
-                       <div className="menuitem">
-                            <Nav className="me-auto">
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/about">About DBMS</Nav.Link>
-                                <Nav.Link href="/product_Service">Product & Service</Nav.Link>
-                                <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-                                <Nav.Link href="/career">Career</Nav.Link>
-                            </Nav>
-                            
-                       </div>
-                    </Container>
-                </Navbar>
-                
-            </>
+        <>
+            <div className="top-nav container-marg">
+                <div className="logo">
+                    <img src="Assets/dbms-bank.png" alt="" srcset="" />
+                </div>
+                <div className="nav-items">
+                    <Link to="/">Home</Link>
+                    <Link to="/about">About DBMS</Link>
+                    <Link to="/product_Service">Product & Service</Link>
+                    <Link to="/sign-up">Sign Up</Link>
+                    <Link to="/career">Career</Link>
+                </div>
+            </div>
+            
+
+
+
+
+        </>
     );
 };
 

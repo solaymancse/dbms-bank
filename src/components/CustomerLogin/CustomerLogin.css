@@ -1,0 +1,38 @@
+.customer-login{
+    display: flex;
+    flex-direction: column;
+   
+}
+.customer-login form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    text-align: center;
+}
+.heading h2{
+    font-size: 20px;
+    margin-top: 20px;
+    color: black;
+    margin-bottom: 50px;
+}
+.customer-login input{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    outline: none;
+}
+.highlight{
+    margin-top: 20px;
+}
+.login{
+    margin-top: 40px;
+    background: red;
+    width: 300px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+.login:hover{
+    background: #FFB919;
+    color: #fff;
+    transition: 0.5s;
+}

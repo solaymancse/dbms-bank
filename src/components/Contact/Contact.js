@@ -1,23 +1,23 @@
 import React from 'react';
 import './Contact.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkedAlt ,faPhoneVolume,faUser} from '@fortawesome/free-solid-svg-icons';
+import * as FcIcon from "react-icons/fc";
+import * as FaIcon from "react-icons/fa";
+import * as MdIcon from "react-icons/md";
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Contact = () => {
-    const styelSheet = {
-        height: '1rem',
-        marginTop: '1rem'
-
-    }
+ 
     return (
-             <div style={styelSheet}>
-                <FontAwesomeIcon icon={faMapMarkedAlt} className='icon'/><small>136 Gulshan Avenue, Circle 2, Gulshan, Dhaka, Bangladesh</small>
-                <small><FontAwesomeIcon icon={faPhoneVolume}/>0293829-892</small>
-                <small> <FontAwesomeIcon icon={faUser}/>1583</small>
-             </div>
-
+        <Container fluid="md">
+            <Row>
+                <Col className="top-contact">
+                    <MdIcon.MdLocationPin/><small>136 Gulshan Avenue, Circle 2, Gulshan, Dhaka, Bangladesh</small>
+                    <FaIcon.FaPhoneVolume/><small>0293829-892</small>
+                    <FcIcon.FcAssistant/><small>1583</small>
+                </Col>
+            </Row>
+        </Container>
     );
-
 };
 
 export default Contact;
