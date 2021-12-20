@@ -43,7 +43,7 @@
 }
 .cust-nav-text{
     list-style: none;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     display: flex;
     padding: 8px;

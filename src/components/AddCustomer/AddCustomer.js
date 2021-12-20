@@ -16,6 +16,7 @@ class AddCustomer extends Component {
         this.onChangePassword = this.onChangePassword.bind(this);
         this.onChangePresentAdd = this.onChangePresentAdd.bind(this);
         this.onChangeParmanantAdd = this.onChangeParmanantAdd.bind(this);
+        this.onChangePhone = this.onChangePhone.bind(this);
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangeMaritalStatus = this.onChangeMaritalStatus.bind(this);
         this.onChangeNid = this.onChangeNid.bind(this);
@@ -34,6 +35,7 @@ class AddCustomer extends Component {
             profession: '',
             present_add: '',
             parmanant_add: '',
+            phone: '',
             email: '',
             user_name: '',
             password: '',
@@ -95,6 +97,11 @@ class AddCustomer extends Component {
             parmanant_add: e.target.value
         });
     }
+    onChangePhone(e) {
+        this.setState({
+            phone: e.target.value
+        });
+    }
     onChangeEmail(e) {
         this.setState({
             email: e.target.value
@@ -147,6 +154,7 @@ class AddCustomer extends Component {
             profession: this.state.profession,
             present_add: this.state.present_add,
             parmanant_add: this.state.parmanant_add,
+            phone: this.state.phone,
             email: this.state.email,
             user_name: this.state.user_name,
             password: this.state.password,
@@ -171,6 +179,7 @@ class AddCustomer extends Component {
             profession: '',
             present_add: '',
             parmanant_add: '',
+            phone: '',
             email: '',
             user_name: '',
             password: '',
@@ -218,7 +227,10 @@ class AddCustomer extends Component {
                                 <Form.Label>Parmanant address</Form.Label>
                                 <Form.Control placeholder="Apartment, studio, or floor" value={this.state.parmanant_add} onChange={this.onChangeParmanantAdd} />
                             </Form.Group>
-                            
+                            <Form.Group as={Col} controlId="formGridPassword">
+                                <Form.Label>Phone</Form.Label>
+                                <Form.Control type="text" placeholder="Phone"  value={this.state.phone} onChange={this.onChangePhone} />
+                            </Form.Group>
                             <Form.Group as={Col} controlId="formGridPassword">
                                 <Form.Label>Profession</Form.Label>
                                 <Form.Control type="text" placeholder="Profession" value={this.state.profession} onChange={this.onChangeProfession} />

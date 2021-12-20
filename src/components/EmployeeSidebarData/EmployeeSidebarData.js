@@ -12,8 +12,8 @@ export const EmployeeSidebarData = [
     },
 
     {
-        title: 'Remove Customer',
-        path: '/remove-customer',
+        title: 'View All Customer',
+        path: '/view-customer',
         icon: <MdPersonAdd/>,
         cName: 'nav-text'
     },
