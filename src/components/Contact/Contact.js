@@ -8,7 +8,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 const Contact = () => {
  
     return (
-        <Container fluid="md">
+        <Container>
             <Row>
                 <Col className="top-contact">
                     <MdIcon.MdLocationPin/><small>136 Gulshan Avenue, Circle 2, Gulshan, Dhaka, Bangladesh</small>

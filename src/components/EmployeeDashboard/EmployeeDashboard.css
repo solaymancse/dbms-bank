@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Zen+Antique&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@200;700&family=Zen+Antique&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Lato:wght@300;400&family=Oswald:wght@200;700&family=Zen+Antique&display=swap');
+
 .left-col{
     background: #5043A0;
     justify-content: center;
@@ -13,7 +11,7 @@
 
 .nav-text{
     list-style: none;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     display: flex;
     padding: 8px 0px 8px 8px;
