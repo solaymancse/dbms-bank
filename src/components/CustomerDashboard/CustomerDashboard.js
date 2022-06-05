@@ -1,65 +1,64 @@
-import React from 'react';
-import './CustomerDashboard.css';
-import { Row, Col } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Profile from '../Profile/Profile';
-import Transaction from '../Transaction/Transaction';
-import PayBill from '../PayBill/PayBill';
-import DebitFunds from '../DebitFunds/DebitFunds';
-import { CustomerSidebarData } from '../CustomerSidebarData/CustomerSidebarData';
-import MyAccountDetails from '../MyAccountDetails/MyAccountDetails';
+import React from "react";
 
+import {
+  Wrapper,
+  Content,
+  Right,
+  RightDiv,
+  TitleDiv,
+  H2,
+  Desc,
+} from "./../DashBoard/DashboardElements";
+import { AiOutlineSearch } from "react-icons/ai";
+import { Navbar } from ".././DashBoard/DashboardElements";
+import { CustomerSideBar } from "./CustomerSideBar/CustomerSideBar";
+import Badge from "@mui/material/Badge";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import img from "../../Assets/profile.png";
+import { Routes, Route } from "react-router-dom";
+import { DashHome } from "./../DashBoard/DashHome/DashHome";
+import { Transaction } from "./../DashBoard/Transaction/Transaction";
+import { CustomerProfile } from './CustomerProfile/CustomerProfile';
 
+export const CustomerDashboard = () => {
+  return (
+    <Wrapper>
+      <CustomerSideBar />
+      <Content>
+        <Navbar>
+          <div>
+            <AiOutlineSearch />
+            <input type="text" placeholder="Search" />
+          </div>
+          <Right>
+            <Badge badgeContent={4} color="secondary">
+              <NotificationsNoneOutlinedIcon color="action" />
+            </Badge>
+            <Badge badgeContent={4} color="primary">
+              <MailOutlinedIcon color="action" />
+            </Badge>
+            <RightDiv>
+              <TitleDiv>
+                <H2>Name</H2>
+                <Desc>Manager</Desc>
+              </TitleDiv>
+              <img
+                src={img}
+                alt="/"
+                style={{ height: "50px", width: "50px" }}
+              />
+            </RightDiv>
+          </Right>
+        </Navbar>
 
-const CustomerDashboard = () => {
-    document.title = "Customer Dashboard";
-
-
-    return (
-        <>
-            <Router>
-                <Row>
-                    <Col md={2} className="customer-dashboard">
-                        <h5>DBMS BANK</h5>
-                        <ul className="cust-nav-menu-items">
-                            <li>
-                                {CustomerSidebarData.map((item, index) => {
-
-                                    return <li key={index} className={item.cName}>
-                                        <Link to={item.path}>
-                                            {item.icon}
-                                            <span>{item.title}</span>
-
-                                        </Link>
-
-                                    </li>
-                                })}
-
-                            </li>
-                        </ul>
-                    </Col>
-
-
-                    <Col md={8} className="mid-col">
-                        <span>Dashboard</span>
-                        <Route exact path="/customerdashboard" render={() => <h1>Welcome Mr.</h1>} />
-                        <Route exact path="/profile" component={Profile} />
-                        <Route exact path="/account-details" component={ MyAccountDetails } />
-                        <Route exact path="/transaction" component={Transaction} />
-                        <Route exact path="/pay-bill" component={PayBill} />
-                        <Route exact path="/debit-funds" component={DebitFunds} />
-                    </Col>
-                    <Col md={2} className='customer-logout'>
-                        <Link to="/log-out"><span>Log Out</span></Link>
-                    </Col>
-                </Row>
-            </Router>
-
-        </>
-    );
-
-}
-
-export default CustomerDashboard;
-
-
+        <Routes>
+          <Route index element={<DashHome />} />
+          <Route path="profile" element={<CustomerProfile />} />
+    
+          <Route path="transaction" element={<Transaction />} />
+        </Routes>
+      </Content>
+    </Wrapper>
+  );
+};

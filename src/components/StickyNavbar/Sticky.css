@@ -1,0 +1,39 @@
+.nav{
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    visibility: hidden;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+   
+    
+  
+}
+
+
+
+
+.nav_white{
+    background-color: #fff;
+    animation: fadeInDown .5s ease-in-out;
+    box-shadow: 0 8px 6px -6px rgb(0 0 0 / 40%);
+    visibility: visible;
+   
+}
+
+@keyframes fadeInDown {
+    0%{
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+        
+    }
+}

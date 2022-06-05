@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "express-fileupload": "^1.4.0",
+    "react-hook-form": "^7.31.3",
+    "sweetalert": "^2.1.2"
+  }
+}

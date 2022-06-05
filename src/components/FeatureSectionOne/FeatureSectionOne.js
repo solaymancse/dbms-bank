@@ -1,17 +1,23 @@
-import { Parallax } from 'react-parallax';
-import './FeatureSectionOne.css';
-import Banner from '../images/features-banner-4.jpg';
-
+import { FeatureOneData } from "../../Data";
+import { Wrapper,H1,Container,Div,Icon ,H2, Desc} from "./FeatureSectionOneElements";
 
 const FeatureSectionOne = () => (
-    <Parallax className="image" bgImage={Banner} strength={800}>
-       <div className="content">
-           <div className="content-txt">
-               <h1>Image 01</h1>
-           </div>
-       </div>
-    </Parallax>
-     
+ 
+  <Wrapper>
+    <div>
+      <H1>Presenting products and services that are right for you</H1>
+    </div>
+   <Container>
+   {FeatureOneData.map((data) => (
+      <Div>
+        <Icon>{data.icon}</Icon>
+        <H2>{data.title}</H2>
+        <Desc>{data.desc}</Desc>
+        <a href="/">{data.link}</a>
+      </Div>
+    ))}
+   </Container>
+  </Wrapper>
 );
 
 export default FeatureSectionOne;

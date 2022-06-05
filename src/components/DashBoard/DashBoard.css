@@ -1,7 +1,4 @@
-.dashboard{
-    display: flex;
-    
-}
+
 .dp{
     border-radius: 50%;
     background: #fff;
@@ -14,11 +11,11 @@
     margin-left: 35%;
 }
 .nav-sec{
-    background: #262626;
-    width: 400px;
+  
+    width: 250px;
     height: 900px;
     float: left;  
-    padding: 50px 20px;
+    padding: 50px;
 }
 .nav-sec h1{
     color: #ffb919;
